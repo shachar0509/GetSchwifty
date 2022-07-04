@@ -11,5 +11,14 @@ export default class Game {
         this.NotifyWin = winFunc
     }
     
+    Checkwin(){
+        for(var i = 0; i < this.board.length-1; i++){
+            if(this.board[i] !== i+1)
+            {
+                return false
+            }
+        }
+        return true
+    }
 
 }
