@@ -7,7 +7,11 @@ export default function InitBoard(sizes) {
                 var rand = Math.floor(Math.random() * size)
                 return rand
             };
-            
+            var i = getRandomInt()
+            while (tempBoard[i] != "") {
+                i = getRandomInt()
+            }
+            tempBoard[i] = value
         };
     }
     
