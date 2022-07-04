@@ -13,6 +13,13 @@ export default function InitBoard(sizes) {
             }
             tempBoard[i] = value
         };
+        for (var i = 0; i < size; i++) {
+            tempBoard.push("")
+        }
+        for (let i = 1; i < size; i++) {
+            enterElement(i)
+        }
+        return tempBoard
     }
     
 
