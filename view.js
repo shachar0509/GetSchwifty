@@ -23,6 +23,14 @@ export function InitBoardSize() {
     var size = Math.pow(inputSize, 2)
     return size
 }
+export default function UpdateBoard(gameBoard)
+{
+    var i = 0
+    gameBoard.forEach(box => {
+        document.getElementById(i).innerHTML = box
+        i++;
+    });
+}
 export function FailNotify(){
     alert("Illegal Move")
 }
