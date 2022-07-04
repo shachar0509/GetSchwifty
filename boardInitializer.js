@@ -21,6 +21,12 @@ export default function InitBoard(sizes) {
         }
         return tempBoard
     }
-    
+    var result = false
+    var Board = []
+    do {
+        Board = GenerateBoard()
+        result = Validate(Board)
+    } while (result === false)
+    return Board
 
 }
