@@ -1,6 +1,6 @@
 import Validate from "./boardValidator.js"
-export default function InitBoard(sizes) {
-    function GenerateBoard(size) {
+export default function InitBoard(size) {
+    function GenerateBoard() {
         var tempBoard = []
         function enterElement(value) {
             function getRandomInt() {
@@ -8,7 +8,7 @@ export default function InitBoard(sizes) {
                 return rand
             };
             var i = getRandomInt()
-            while (tempBoard[i] != "") {
+            while (tempBoard[i] !== "") {
                 i = getRandomInt()
             }
             tempBoard[i] = value
