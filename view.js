@@ -15,6 +15,14 @@ export function SetBoard(gameBoard, onClickFunc) {
         i++;
     });
 }
+export function InitBoardSize() {
+    let inputSize = parseInt(prompt("Enter Board Size: "))
+    while (inputSize < 1) {
+        inputSize = parseInt(prompt("Size needs to be a positive integer: "))
+    }
+    var size = Math.pow(inputSize, 2)
+    return size
+}
 export function FailNotify(){
     alert("Illegal Move")
 }
